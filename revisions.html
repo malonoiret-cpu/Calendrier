@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mes révisions</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<header>
+  <h1>📚 Mes révisions</h1>
+  <div>
+    <button onclick="exporter()">Exporter</button>
+    <button onclick="document.getElementById('fichier').click()">Importer</button>
+    <input type="file" id="fichier" accept=".json" hidden onchange="importer(this)">
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="nav">
+      <button onclick="changerMois(-1)">◀</button>
+      <strong id="titreMois"></strong>
+      <button onclick="changerMois(1)">▶</button>
+    </div>
+    <div class="grille" id="grille"></div>
+    <div class="legende">🔴 pas connu · 🟡 moyennement connu · 🟢 bien connu · gris = pas encore évalué</div>
+  </section>
+
+  <div>
+    <section id="panneauJour" style="margin-bottom:16px"></section>
+    <section>
+      <h2>Mes leçons</h2>
+      <textarea id="nouvelles" placeholder="Une leçon par ligne"></textarea>
+      <button onclick="ajouterLecons()">Ajouter</button>
+      <div id="listeLecons"></div>
+    </section>
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f6f3;color:#222}
+  header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-bottom:1px solid #ddd}
+  h1{font-size:1.2rem;margin:0}
+  main{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:16px;max-width:1200px;margin:auto}
+  @media(max-width:800px){main{grid-template-columns:1fr}}
+  section{background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px}
+  h2{font-size:1rem;margin:0 0 8px}
+  button{cursor:pointer;border:1px solid #bbb;background:#fff;border-radius:6px;padding:4px 8px;font-size:.85rem}
+  button:hover{background:#eee}
+  .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .grille{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+  .entete{text-align:center;font-size:.75rem;color:#777}
+  .jour{min-height:70px;border:1px solid #e3e3e3;border-radius:6px;padding:2px;cursor:pointer;overflow:hidden;font-size:.7rem}
+  .jour:hover{background:#f0f4ff}
+  .jour.autre{opacity:.4}
+  .jour.today{border-color:#3b5bdb;border-width:2px}
+  .jour.sel{background:#e7ecff}
+  .jour .n{font-weight:600;font-size:.75rem}
+  .chip{display:block;color:#fff;border-radius:3px;padding:0 3px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chip.done{opacity:.35;text-decoration:line-through}
+  .ligne{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid #eee;font-size:.9rem}
+  .ligne .nom{flex:1}
+  .pt{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+  .niv button{padding:2px 5px}
+  textarea{width:100%;box-sizing:border-box;min-height:60px}
+  .legende{font-size:.8rem;color:#666;margin-top:8px}

@@ -143,7 +143,7 @@ function afficherLecons() {
   document.getElementById('listeLecons').innerHTML = data.lessons.map(l =>
     `<div class="ligne"><span class="pt" style="background:${COULEURS[l.niveau]}"></span>
       <span class="nom">${esc(l.nom)}</span>
-      <span class="niv"><button onclick="definirNiveau('${l.id}','rouge')">🔴</button><button onclick="definirNiveau('${l.id}','jaune')">🟡</button><button onclick="definirNiveau('${l.id}','vert')">🟢</button></span>
+      <span class="niv"><button title="Pas encore évalué" onclick="definirNiveau('${l.id}','neutre')">⚪</button><button onclick="definirNiveau('${l.id}','rouge')">🔴</button><button onclick="definirNiveau('${l.id}','jaune')">🟡</button><button onclick="definirNiveau('${l.id}','vert')">🟢</button></span>
       <button title="Supprimer" onclick="supprimerLecon('${l.id}')">🗑</button></div>`
   ).join('') || '<div class="legende">Aucune leçon pour l’instant.</div>';
 }
